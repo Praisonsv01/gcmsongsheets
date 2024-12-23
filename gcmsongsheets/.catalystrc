@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "10165000000046744",
+      "name": "Glorious-Crown-Ministries",
+      "domain": {
+        "id": "50024114314",
+        "name": "glorious-crown-ministries-60032931260.development"
+      },
+      "timezone": "Europe/Dublin",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60032931260",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}
