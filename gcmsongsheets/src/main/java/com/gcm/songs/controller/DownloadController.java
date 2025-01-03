@@ -9,11 +9,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.zc.auth.CatalystSDK;
 import com.zc.component.files.ZCFile;
 import com.zc.component.files.ZCFolder;
+import com.zc.component.object.ZCObject;
+import com.zc.component.object.ZCRowObject;
+import com.zc.component.object.ZCTable;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @RestController
 public class DownloadController {
@@ -23,6 +30,19 @@ public class DownloadController {
 		return ResponseEntity.ok("Version-1");
 	}
 
+	@GetMapping("/save-feedback")
+	public ResponseEntity<String> saveFeedback(@RequestParam("feedbackText") String feedbackText) throws Exception{
+		System.out.println("inside save-feedback");
+		ZCObject object = ZCObject.getInstance(); 
+		ZCTable tab = object.getTable("10165000000063001"); 
+		ZCRowObject row = ZCRowObject.getInstance(); 
+		row.set("FeedbackText","George Smith"); 
+		tab.insertRow(row);
+		System.out.println("saved text!");
+		
+		return ResponseEntity.ok("Feedback saved successfully!");
+	}
+	
 	@GetMapping("download-song-pdf/{song-name}")
 	public ResponseEntity<String> downloadPdf(HttpServletRequest request, HttpServletResponse response,
 			@PathVariable("song-name") String songName) throws Exception {
@@ -90,7 +110,7 @@ public class DownloadController {
 			fileId = "10165000000048069";
 			break;
 
-		case "En-thevigal":
+		case "En-thevigal-arintha-dheivame":
 			is = folder.downloadFile(10165000000048064L);
 			fileId = "10165000000048064";
 			break;
@@ -164,5 +184,5 @@ public class DownloadController {
 
 		return ResponseEntity.status(HttpStatus.CREATED).body(jsonResponse);
 	}
-
+	
 }
