@@ -1,611 +1,83 @@
-[debug] [2024-12-22T09:12:45.824Z] : 
-[debug] [2024-12-22T09:12:45.851Z] : ----------------------------------------------------------------------
-[debug] [2024-12-22T09:12:45.853Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
-[debug] [2024-12-22T09:12:45.853Z] : CLI Version:  1.17.6
-[debug] [2024-12-22T09:12:45.854Z] : Platform:     win32
-[debug] [2024-12-22T09:12:45.854Z] : Node Version: v20.12.2
-[debug] [2024-12-22T09:12:45.854Z] : Time:         Sun Dec 22 2024 14:42:45 GMT+0530 (India Standard Time)
-[debug] [2024-12-22T09:12:45.855Z] : ----------------------------------------------------------------------
-[debug] [2024-12-22T09:12:45.855Z] : 
-[debug] [2024-12-22T09:12:48.592Z] : > authorizing via signed-in user option
-[debug] [2024-12-22T09:12:48.593Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
-[debug] [2024-12-22T09:12:48.621Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
-
-[debug] [2024-12-22T09:12:49.316Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 09:12:49 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=d6ab5abd-af55-4ed2-a57a-170402eea5ef;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d6ab5abd-af55-4ed2-a57a-170402eea5ef;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-22T09:12:49.326Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
-
-[debug] [2024-12-22T09:12:49.483Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 09:12:49 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=5dfd34b1-30a6-4c32-b5a6-28ee238923d7;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=5dfd34b1-30a6-4c32-b5a6-28ee238923d7;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-22T09:12:50.333Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
-[debug] [2024-12-22T09:12:50.349Z] : No basic functions to add
-[info] [2024-12-22T09:12:50.356Z] : 
-[info] [2024-12-22T09:12:50.360Z] : Executing AppSail [PRESERVE] [gcmsongsheets] script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2024-12-22T09:12:50.360Z] : Executing command > mvn clean package
-[info] [2024-12-22T09:12:50.362Z] : > mvn clean package
-[error] [2024-12-22T09:13:34.727Z] : × AppSail[gcmsongsheets]: Unable to start the server: The script exited with code greater than 0 or an error
-[debug] [2024-12-22T09:13:34.787Z] : Error serving the resources:  CatalystError: No Resources served
-    at Server.<anonymous> (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\index.js:400:34)
-    at Generator.next (<anonymous>)
-    at fulfilled (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\index.js:5:58)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
-  status: 500,
-  exit: 1,
-  original: undefined,
-  context: undefined,
-  errorId: 'SERVE-IDX-2',
-  arg: undefined,
-  skipHelp: false,
-  fileName: 'D:\\Users\\p.victorjebaraj\\AppData\\Roaming\\npm\\node_modules\\zcatalyst-cli\\lib\\serve\\server\\index'
-}
-[info] [2024-12-22T09:13:34.935Z] : 
-[error] [2024-12-22T09:13:34.940Z] : × Error: The script AppSail [PRESERVE] [gcmsongsheets] exited with the exit code greater than 0 or with an error.
-[debug] [2024-12-22T09:13:34.941Z] : Error Stack: CatalystError: The script exited with code greater than 0 or an error
-    at executeCommand (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\execute-script.js:60:15)
-    at executeHook (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\lib\appsail\index.js:33:41)
-    at D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\lib\appsail\index.js:55:9
-    at Generator.next (<anonymous>)
-    at D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\lib\appsail\index.js:8:71
-    at new Promise (<anonymous>)
-    at __awaiter (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\lib\appsail\index.js:4:12)
-    at exports.default (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\lib\appsail\index.js:47:38)
-    at Server.<anonymous> (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\index.js:129:71)
-    at Generator.next (<anonymous>)
-[debug] [2024-12-22T09:13:34.942Z] : Original Error: Error: {"status":1,"signal":null,"output":[null,null,null],"pid":5716,"stdout":null,"stderr":null,"error":{"code":"ENOENT","errno":"ENOENT","syscall":"spawnSync mvn clean package","path":"mvn clean package","spawnargs":[]}}
-    at executeCommand (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\execute-script.js:62:23)
-    at executeHook (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\lib\appsail\index.js:33:41)
-    at D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\lib\appsail\index.js:55:9
-    at Generator.next (<anonymous>)
-    at D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\lib\appsail\index.js:8:71
-    at new Promise (<anonymous>)
-    at __awaiter (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\lib\appsail\index.js:4:12)
-    at exports.default (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\lib\appsail\index.js:47:38)
-    at Server.<anonymous> (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\index.js:129:71)
-    at Generator.next (<anonymous>)
-[debug] [2024-12-22T09:13:34.942Z] : Error Status: 500
-[info] [2024-12-22T09:13:34.945Z] : 
-[error] [2024-12-22T09:13:34.950Z] : Execution Info: 
-{
-  "status": 1,
-  "signal": null,
-  "output": [
-    null,
-    null,
-    null
-  ],
-  "pid": 5716,
-  "stdout": null,
-  "stderr": null,
-  "error": {
-    "code": "ENOENT",
-    "errno": "ENOENT",
-    "syscall": "spawnSync mvn clean package",
-    "path": "mvn clean package",
-    "spawnargs": []
-  }
-}
-[info] [2024-12-22T09:13:34.962Z] : 
-[error] [2024-12-22T09:13:34.966Z] : REF: https://www.zoho.com/catalyst/help/scripts.html#Run
-[info] [2024-12-22T09:13:34.971Z] : 
-[error] [2024-12-22T09:13:34.983Z] : × Error: No components were successfully started for serve
-[debug] [2024-12-22T09:13:34.983Z] : Error Stack: CatalystError: No Resources served
-    at Server.<anonymous> (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\index.js:400:34)
-    at Generator.next (<anonymous>)
-    at fulfilled (D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\serve\server\index.js:5:58)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-[debug] [2024-12-22T09:13:34.983Z] : Error Status: 500
-[info] [2024-12-22T09:13:34.986Z] : 
-[error] [2024-12-22T09:13:35.002Z] : Please rectify the errors if any
-[debug] [2024-12-22T09:13:35.003Z] : EXEC ENDED with event: Error (User), message: No Resources served
-[debug] [2024-12-22T09:13:35.003Z] : TOTAL DURATION OF COMMAND EXEC : 46414
-[debug] [2024-12-22T09:23:13.251Z] : 
-[debug] [2024-12-22T09:23:13.280Z] : ----------------------------------------------------------------------
-[debug] [2024-12-22T09:23:13.285Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
-[debug] [2024-12-22T09:23:13.286Z] : CLI Version:  1.17.6
-[debug] [2024-12-22T09:23:13.286Z] : Platform:     win32
-[debug] [2024-12-22T09:23:13.287Z] : Node Version: v20.12.2
-[debug] [2024-12-22T09:23:13.287Z] : Time:         Sun Dec 22 2024 14:53:13 GMT+0530 (India Standard Time)
-[debug] [2024-12-22T09:23:13.287Z] : ----------------------------------------------------------------------
-[debug] [2024-12-22T09:23:13.287Z] : 
-[debug] [2024-12-22T09:23:17.500Z] : > authorizing via signed-in user option
-[debug] [2024-12-22T09:23:17.500Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
-[debug] [2024-12-22T09:23:17.547Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
-
-[debug] [2024-12-22T09:23:18.255Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 09:23:18 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=4ec200bd-6d7a-4df5-90c9-4102874a2e73;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=4ec200bd-6d7a-4df5-90c9-4102874a2e73;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-22T09:23:18.271Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
-
-[debug] [2024-12-22T09:23:18.461Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 09:23:18 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=eb8b5926-36b2-4d6a-9d9e-092109fea383;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=eb8b5926-36b2-4d6a-9d9e-092109fea383;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-22T09:23:19.286Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
-[debug] [2024-12-22T09:23:19.303Z] : No basic functions to add
-[info] [2024-12-22T09:23:19.312Z] : 
-[info] [2024-12-22T09:23:19.315Z] : Executing AppSail [PRESERVE] [gcmsongsheets] script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2024-12-22T09:23:19.316Z] : Executing command > mvn clean package
-[info] [2024-12-22T09:23:19.316Z] : > mvn clean package
-[info] [2024-12-22T09:24:06.104Z] : 
-[info] [2024-12-22T09:24:06.108Z] :  >>>>>>>>>>>>>> AppSail <<<<<<<<<<<<<< 
-[info] [2024-12-22T09:24:06.116Z] : i gcmsongsheets: http://localhost:3001
-[info] [2024-12-22T09:24:06.117Z] : 
-[debug] [2024-12-22T09:28:36.139Z] : 
-[debug] [2024-12-22T09:28:36.141Z] : ----------------------------------------------------------------------
-[debug] [2024-12-22T09:28:36.142Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
-[debug] [2024-12-22T09:28:36.142Z] : CLI Version:  1.17.6
-[debug] [2024-12-22T09:28:36.142Z] : Platform:     win32
-[debug] [2024-12-22T09:28:36.142Z] : Node Version: v20.12.2
-[debug] [2024-12-22T09:28:36.143Z] : Time:         Sun Dec 22 2024 14:58:36 GMT+0530 (India Standard Time)
-[debug] [2024-12-22T09:28:36.143Z] : ----------------------------------------------------------------------
-[debug] [2024-12-22T09:28:36.143Z] : 
-[debug] [2024-12-22T09:28:39.259Z] : > authorizing via signed-in user option
-[debug] [2024-12-22T09:28:39.260Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
-[debug] [2024-12-22T09:28:39.281Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
-
-[debug] [2024-12-22T09:28:39.885Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 09:28:39 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=a462ccef-4c0d-4136-8e06-bd57f5a1a754;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a462ccef-4c0d-4136-8e06-bd57f5a1a754;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-22T09:28:39.892Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
-
-[debug] [2024-12-22T09:28:40.056Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 09:28:39 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=d2d0ef8d-f8e5-47d1-a844-f7017842c9fd;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d2d0ef8d-f8e5-47d1-a844-f7017842c9fd;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-22T09:28:40.733Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
-[debug] [2024-12-22T09:28:40.764Z] : No basic functions to add
-[info] [2024-12-22T09:28:40.774Z] : 
-[info] [2024-12-22T09:28:40.794Z] : Executing AppSail [PRESERVE] [gcmsongsheets] script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2024-12-22T09:28:40.794Z] : Executing command > mvn clean package
-[info] [2024-12-22T09:28:40.796Z] : > mvn clean package
-[info] [2024-12-22T09:29:06.901Z] : 
-[info] [2024-12-22T09:29:06.903Z] :  >>>>>>>>>>>>>> AppSail <<<<<<<<<<<<<< 
-[info] [2024-12-22T09:29:06.905Z] : i gcmsongsheets: http://localhost:3001
-[info] [2024-12-22T09:29:06.908Z] : 
-[info] [2024-12-22T09:39:29.324Z] : Shutting down server
-[info] [2024-12-22T09:39:29.371Z] : 
-[info] [2024-12-22T09:39:29.401Z] : √ Shutdown complete
-[debug] [2024-12-22T09:39:29.402Z] : NO ERRORS REGISTERED
-[debug] [2024-12-22T09:39:29.403Z] : EXEC ENDED with event: serve, message: success
-[debug] [2024-12-22T09:39:29.403Z] : TOTAL DURATION OF COMMAND EXEC : 650226
-[debug] [2024-12-22T09:39:34.413Z] : 
-[debug] [2024-12-22T09:39:34.415Z] : ----------------------------------------------------------------------
-[debug] [2024-12-22T09:39:34.415Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
-[debug] [2024-12-22T09:39:34.415Z] : CLI Version:  1.17.6
-[debug] [2024-12-22T09:39:34.416Z] : Platform:     win32
-[debug] [2024-12-22T09:39:34.416Z] : Node Version: v20.12.2
-[debug] [2024-12-22T09:39:34.416Z] : Time:         Sun Dec 22 2024 15:09:34 GMT+0530 (India Standard Time)
-[debug] [2024-12-22T09:39:34.416Z] : ----------------------------------------------------------------------
-[debug] [2024-12-22T09:39:34.417Z] : 
-[debug] [2024-12-22T09:39:37.621Z] : > authorizing via signed-in user option
-[debug] [2024-12-22T09:39:37.622Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
-[debug] [2024-12-22T09:39:37.644Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
-
-[debug] [2024-12-22T09:39:38.324Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 09:39:38 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=c388ccfb-3cbf-46cf-aa40-a975d7df6c2a;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c388ccfb-3cbf-46cf-aa40-a975d7df6c2a;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-22T09:39:38.334Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
-
-[debug] [2024-12-22T09:39:38.529Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 09:39:38 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=f0ad765f-fb8b-4a99-b7b0-247b7557945a;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=f0ad765f-fb8b-4a99-b7b0-247b7557945a;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-22T09:39:39.388Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
-[debug] [2024-12-22T09:39:39.403Z] : No basic functions to add
-[info] [2024-12-22T09:39:39.406Z] : 
-[info] [2024-12-22T09:39:39.411Z] : Executing AppSail [PRESERVE] [gcmsongsheets] script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2024-12-22T09:39:39.412Z] : Executing command > mvn clean package
-[info] [2024-12-22T09:39:39.413Z] : > mvn clean package
-[info] [2024-12-22T09:40:10.105Z] : 
-[info] [2024-12-22T09:40:10.109Z] :  >>>>>>>>>>>>>> AppSail <<<<<<<<<<<<<< 
-[info] [2024-12-22T09:40:10.114Z] : i gcmsongsheets: http://localhost:3001
-[info] [2024-12-22T09:40:10.131Z] : 
-[info] [2024-12-22T10:36:54.114Z] : Shutting down server
-[info] [2024-12-22T10:36:54.227Z] : 
-[info] [2024-12-22T10:36:54.232Z] : √ Shutdown complete
-[debug] [2024-12-22T10:36:54.246Z] : NO ERRORS REGISTERED
-[debug] [2024-12-22T10:36:54.252Z] : EXEC ENDED with event: serve, message: success
-[debug] [2024-12-22T10:36:54.253Z] : TOTAL DURATION OF COMMAND EXEC : 3436723
-[debug] [2024-12-22T10:37:10.634Z] : 
-[debug] [2024-12-22T10:37:10.664Z] : ----------------------------------------------------------------------
-[debug] [2024-12-22T10:37:10.665Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js deploy
-[debug] [2024-12-22T10:37:10.665Z] : CLI Version:  1.17.6
-[debug] [2024-12-22T10:37:10.666Z] : Platform:     win32
-[debug] [2024-12-22T10:37:10.666Z] : Node Version: v20.12.2
-[debug] [2024-12-22T10:37:10.667Z] : Time:         Sun Dec 22 2024 16:07:10 GMT+0530 (India Standard Time)
-[debug] [2024-12-22T10:37:10.667Z] : ----------------------------------------------------------------------
-[debug] [2024-12-22T10:37:10.667Z] : 
-[debug] [2024-12-22T10:37:13.507Z] : > authorizing via signed-in user option
-[debug] [2024-12-22T10:37:13.508Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
-[debug] [2024-12-22T10:37:13.543Z] : > refreshing access token <
-[debug] [2024-12-22T10:37:13.545Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.in/oauth/v2/token 
+[debug] [2025-01-09T07:54:18.756Z] : 
+[debug] [2025-01-09T07:54:18.791Z] : ----------------------------------------------------------------------
+[debug] [2025-01-09T07:54:18.793Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js deploy
+[debug] [2025-01-09T07:54:18.793Z] : CLI Version:  1.18.0-beta.8
+[debug] [2025-01-09T07:54:18.793Z] : Platform:     win32
+[debug] [2025-01-09T07:54:18.794Z] : Node Version: v20.12.2
+[debug] [2025-01-09T07:54:18.794Z] : Time:         Thu Jan 09 2025 13:24:18 GMT+0530 (India Standard Time)
+[debug] [2025-01-09T07:54:18.795Z] : ----------------------------------------------------------------------
+[debug] [2025-01-09T07:54:18.795Z] : 
+[debug] [2025-01-09T07:54:19.447Z] : > authorizing via signed-in user option
+[debug] [2025-01-09T07:54:19.448Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
+[debug] [2025-01-09T07:54:19.478Z] : > refreshing access token <
+[debug] [2025-01-09T07:54:19.479Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.in/oauth/v2/token 
 <request body omitted>
 
-[debug] [2024-12-22T10:37:14.196Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 10:37:14 GMT","content-type":"application/json;charset=UTF-8","content-length":"168","connection":"keep-alive","set-cookie":["zalb_6e73717622=dea4bb29906843a6fbdf3bd5c0e43d1d; Path=/; Secure; HttpOnly","iamcsr=e27237f3-48e2-49b0-a0d9-2dcd2f712acd;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e27237f3-48e2-49b0-a0d9-2dcd2f712acd;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","content-security-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.zohocdn.com https://*.zoho.com https://*.zoho.eu https://*.zoho.com.cn https://*.zoho.com.au https://*.zoho.jp https://*.zoho.uk https://*.zoho.sa https://*.zohocloud.ca; report-uri https://logsapi.zoho.in/csplog?service=accounts;","pragma":"no-cache","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+[debug] [2025-01-09T07:54:20.339Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 09 Jan 2025 07:54:20 GMT","content-type":"application/json;charset=UTF-8","content-length":"168","connection":"keep-alive","cache-control":"no-store","x-content-type-options":"nosniff","pragma":"no-cache","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
 
-[debug] [2024-12-22T10:37:14.210Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
+[debug] [2025-01-09T07:54:20.353Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
 
-[debug] [2024-12-22T10:37:14.713Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 10:37:14 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=c0f41fb7-b325-40fb-a087-1d6e59de2f29;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c0f41fb7-b325-40fb-a087-1d6e59de2f29;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+[debug] [2025-01-09T07:54:20.844Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 09 Jan 2025 07:54:20 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
 
-[debug] [2024-12-22T10:37:14.716Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
+[debug] [2025-01-09T07:54:20.847Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
 
-[debug] [2024-12-22T10:37:14.875Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 10:37:14 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=d702f13e-d383-40a5-b60b-4be093c3bca9;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=d702f13e-d383-40a5-b60b-4be093c3bca9;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+[debug] [2025-01-09T07:54:21.023Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 09 Jan 2025 07:54:20 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
 
-[info] [2024-12-22T10:37:14.904Z] : 
-[info] [2024-12-22T10:37:14.905Z] : Executing predeploy script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2024-12-22T10:37:14.905Z] : Executing command > mvn clean package
-[info] [2024-12-22T10:37:14.905Z] : > mvn clean package
-[debug] [2024-12-22T10:37:47.778Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/appsail/upsert 
+[info] [2025-01-09T07:54:21.048Z] : 
+[info] [2025-01-09T07:54:21.049Z] : Executing predeploy script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
+[debug] [2025-01-09T07:54:21.049Z] : Executing command > mvn clean package
+[info] [2025-01-09T07:54:21.049Z] : > mvn clean package
+[debug] [2025-01-09T07:54:59.310Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/appsail/upsert 
 
-[debug] [2024-12-22T10:38:39.665Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 10:38:39 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=39d372f1-92a4-41f8-8952-05544925b3d6;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=39d372f1-92a4-41f8-8952-05544925b3d6;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+[debug] [2025-01-09T07:55:47.058Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 09 Jan 2025 07:55:46 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
 
-[info] [2024-12-22T10:38:39.671Z] : 
-[info] [2024-12-22T10:38:39.674Z] : i AppSail(gcmsongsheets): URL => https://gcmsongsheets-50024114314.development.catalystappsail.in
-[info] [2024-12-22T10:38:39.675Z] : √ AppSail(gcmsongsheets): deploy successful
-[info] [2024-12-22T10:38:39.676Z] : 
-[info] [2024-12-22T10:38:39.677Z] : √ Catalyst deploy complete!
-[debug] [2024-12-22T10:38:39.678Z] : NO ERRORS REGISTERED
-[debug] [2024-12-22T10:38:39.678Z] : EXEC ENDED with event: deploy, message: success
-[debug] [2024-12-22T10:38:39.679Z] : TOTAL DURATION OF COMMAND EXEC : 86270
-[debug] [2024-12-22T10:59:21.445Z] : 
-[debug] [2024-12-22T10:59:21.473Z] : ----------------------------------------------------------------------
-[debug] [2024-12-22T10:59:21.483Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js deploy
-[debug] [2024-12-22T10:59:21.483Z] : CLI Version:  1.17.6
-[debug] [2024-12-22T10:59:21.484Z] : Platform:     win32
-[debug] [2024-12-22T10:59:21.484Z] : Node Version: v20.12.2
-[debug] [2024-12-22T10:59:21.484Z] : Time:         Sun Dec 22 2024 16:29:21 GMT+0530 (India Standard Time)
-[debug] [2024-12-22T10:59:21.485Z] : ----------------------------------------------------------------------
-[debug] [2024-12-22T10:59:21.485Z] : 
-[debug] [2024-12-22T10:59:24.222Z] : > authorizing via signed-in user option
-[debug] [2024-12-22T10:59:24.223Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
-[debug] [2024-12-22T10:59:24.246Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
+[info] [2025-01-09T07:55:47.065Z] : 
+[info] [2025-01-09T07:55:47.066Z] : i AppSail(gcmsongsheets): URL => https://gcmsongsheets-50024114314.development.catalystappsail.in
+[info] [2025-01-09T07:55:47.077Z] : √ AppSail(gcmsongsheets): deploy successful
+[info] [2025-01-09T07:55:47.095Z] : 
+[info] [2025-01-09T07:55:47.100Z] : √ Catalyst deploy complete!
+[debug] [2025-01-09T07:55:47.103Z] : NO ERRORS REGISTERED
+[debug] [2025-01-09T07:55:47.104Z] : EXEC ENDED with event: deploy, message: success
+[debug] [2025-01-09T07:55:47.104Z] : TOTAL DURATION OF COMMAND EXEC : 87682
+[debug] [2025-01-09T08:52:45.003Z] : 
+[debug] [2025-01-09T08:52:47.038Z] : ----------------------------------------------------------------------
+[debug] [2025-01-09T08:52:47.042Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js deploy
+[debug] [2025-01-09T08:52:47.042Z] : CLI Version:  1.18.0-beta.8
+[debug] [2025-01-09T08:52:47.042Z] : Platform:     win32
+[debug] [2025-01-09T08:52:47.042Z] : Node Version: v20.12.2
+[debug] [2025-01-09T08:52:47.043Z] : Time:         Thu Jan 09 2025 14:22:47 GMT+0530 (India Standard Time)
+[debug] [2025-01-09T08:52:47.044Z] : ----------------------------------------------------------------------
+[debug] [2025-01-09T08:52:47.044Z] : 
+[debug] [2025-01-09T08:52:48.003Z] : > authorizing via signed-in user option
+[debug] [2025-01-09T08:52:48.003Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
+[debug] [2025-01-09T08:52:48.043Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
 
-[debug] [2024-12-22T10:59:24.886Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 10:59:24 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=bd7a25e2-8e7d-4988-ae13-097a4ddb58c0;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=bd7a25e2-8e7d-4988-ae13-097a4ddb58c0;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+[debug] [2025-01-09T08:52:48.955Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 09 Jan 2025 08:52:48 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
 
-[debug] [2024-12-22T10:59:24.895Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
+[debug] [2025-01-09T08:52:48.961Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
 
-[debug] [2024-12-22T10:59:25.064Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 10:59:24 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=5af7431d-64b1-4a6b-8f69-3b592ada35a5;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=5af7431d-64b1-4a6b-8f69-3b592ada35a5;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+[debug] [2025-01-09T08:52:49.226Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 09 Jan 2025 08:52:49 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
 
-[info] [2024-12-22T10:59:25.090Z] : 
-[info] [2024-12-22T10:59:25.093Z] : Executing predeploy script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2024-12-22T10:59:25.094Z] : Executing command > mvn clean package
-[info] [2024-12-22T10:59:25.094Z] : > mvn clean package
-[debug] [2024-12-22T10:59:58.847Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/appsail/upsert 
+[info] [2025-01-09T08:52:49.279Z] : 
+[info] [2025-01-09T08:52:49.280Z] : Executing predeploy script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
+[debug] [2025-01-09T08:52:49.280Z] : Executing command > mvn clean package
+[info] [2025-01-09T08:52:49.281Z] : > mvn clean package
+[debug] [2025-01-09T08:53:27.767Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/appsail/upsert 
 
-[debug] [2024-12-22T11:00:42.674Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 22 Dec 2024 11:00:42 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=718343a1-75f2-45cb-a4d9-b0a22f62dc0a;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=718343a1-75f2-45cb-a4d9-b0a22f62dc0a;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+[debug] [2025-01-09T08:54:11.299Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 09 Jan 2025 08:54:11 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
 
-[info] [2024-12-22T11:00:42.681Z] : 
-[info] [2024-12-22T11:00:42.682Z] : i AppSail(gcmsongsheets): URL => https://gcmsongsheets-50024114314.development.catalystappsail.in
-[info] [2024-12-22T11:00:42.682Z] : √ AppSail(gcmsongsheets): deploy successful
-[info] [2024-12-22T11:00:42.686Z] : 
-[info] [2024-12-22T11:00:42.691Z] : √ Catalyst deploy complete!
-[debug] [2024-12-22T11:00:42.692Z] : NO ERRORS REGISTERED
-[debug] [2024-12-22T11:00:42.693Z] : EXEC ENDED with event: deploy, message: success
-[debug] [2024-12-22T11:00:42.693Z] : TOTAL DURATION OF COMMAND EXEC : 78579
-[debug] [2024-12-23T06:25:41.040Z] : 
-[debug] [2024-12-23T06:25:41.064Z] : ----------------------------------------------------------------------
-[debug] [2024-12-23T06:25:41.066Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js deploy
-[debug] [2024-12-23T06:25:41.066Z] : CLI Version:  1.17.6
-[debug] [2024-12-23T06:25:41.066Z] : Platform:     win32
-[debug] [2024-12-23T06:25:41.066Z] : Node Version: v20.12.2
-[debug] [2024-12-23T06:25:41.067Z] : Time:         Mon Dec 23 2024 06:25:41 GMT+0000 (Coordinated Universal Time)
-[debug] [2024-12-23T06:25:41.068Z] : ----------------------------------------------------------------------
-[debug] [2024-12-23T06:25:41.069Z] : 
-[debug] [2024-12-23T06:25:44.262Z] : > authorizing via signed-in user option
-[debug] [2024-12-23T06:25:44.263Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
-[debug] [2024-12-23T06:25:44.289Z] : > refreshing access token <
-[debug] [2024-12-23T06:25:44.291Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.in/oauth/v2/token 
-<request body omitted>
-
-[debug] [2024-12-23T06:25:44.928Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 06:25:44 GMT","content-type":"application/json;charset=UTF-8","content-length":"168","connection":"keep-alive","set-cookie":["zalb_6e73717622=13e67ac15bc4d3ece130966123511df7; Path=/; Secure; HttpOnly","iamcsr=90c7ad0d-d70c-4c8e-9841-a69f9a6cf00a;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=90c7ad0d-d70c-4c8e-9841-a69f9a6cf00a;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","content-security-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.zohocdn.com https://*.zoho.com https://*.zoho.eu https://*.zoho.com.cn https://*.zoho.com.au https://*.zoho.jp https://*.zoho.uk https://*.zoho.sa https://*.zohocloud.ca; report-uri https://logsapi.zoho.in/csplog?service=accounts;","pragma":"no-cache","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-23T06:25:44.943Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
-
-[debug] [2024-12-23T06:25:45.480Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 06:25:45 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=1b8eb90b-95f1-483a-89a6-4dce045c41ae;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=1b8eb90b-95f1-483a-89a6-4dce045c41ae;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-23T06:25:45.483Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
-
-[debug] [2024-12-23T06:25:45.660Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 06:25:45 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=89ffba3e-2283-41b1-8c03-727a5ffbd7e8;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=89ffba3e-2283-41b1-8c03-727a5ffbd7e8;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[info] [2024-12-23T06:25:45.687Z] : 
-[info] [2024-12-23T06:25:45.688Z] : Executing predeploy script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2024-12-23T06:25:45.688Z] : Executing command > mvn clean package
-[info] [2024-12-23T06:25:45.688Z] : > mvn clean package
-[debug] [2024-12-23T17:34:26.768Z] : > refreshing access token <
-[debug] [2024-12-23T17:34:26.771Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.in/oauth/v2/token 
-<request body omitted>
-
-[debug] [2024-12-23T17:34:27.268Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 17:34:27 GMT","content-type":"application/json;charset=UTF-8","content-length":"168","connection":"keep-alive","set-cookie":["zalb_6e73717622=dea4bb29906843a6fbdf3bd5c0e43d1d; Path=/; Secure; HttpOnly","iamcsr=109cc3cb-c980-4b1b-b07a-fd6174b969e2;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=109cc3cb-c980-4b1b-b07a-fd6174b969e2;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","content-security-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.zohocdn.com https://*.zoho.com https://*.zoho.eu https://*.zoho.com.cn https://*.zoho.com.au https://*.zoho.jp https://*.zoho.uk https://*.zoho.sa https://*.zohocloud.ca; report-uri https://logsapi.zoho.in/csplog?service=accounts;","pragma":"no-cache","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-23T17:34:27.283Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/appsail/upsert 
-
-[debug] [2024-12-23T17:35:13.848Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 17:35:13 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=9f0a00fa-b467-42cd-99ea-701ebaa83ac1;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=9f0a00fa-b467-42cd-99ea-701ebaa83ac1;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[info] [2024-12-23T17:35:13.853Z] : 
-[info] [2024-12-23T17:35:13.855Z] : i AppSail(gcmsongsheets): URL => https://gcmsongsheets-50024114314.development.catalystappsail.in
-[info] [2024-12-23T17:35:13.859Z] : √ AppSail(gcmsongsheets): deploy successful
-[info] [2024-12-23T17:35:13.860Z] : 
-[info] [2024-12-23T17:35:13.866Z] : √ Catalyst deploy complete!
-[debug] [2024-12-23T17:35:13.867Z] : NO ERRORS REGISTERED
-[debug] [2024-12-23T17:35:13.869Z] : EXEC ENDED with event: deploy, message: success
-[debug] [2024-12-23T17:35:13.869Z] : TOTAL DURATION OF COMMAND EXEC : 40169697
-[debug] [2024-12-23T17:42:04.524Z] : 
-[debug] [2024-12-23T17:42:04.554Z] : ----------------------------------------------------------------------
-[debug] [2024-12-23T17:42:04.556Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js deploy
-[debug] [2024-12-23T17:42:04.556Z] : CLI Version:  1.17.6
-[debug] [2024-12-23T17:42:04.556Z] : Platform:     win32
-[debug] [2024-12-23T17:42:04.557Z] : Node Version: v20.12.2
-[debug] [2024-12-23T17:42:04.557Z] : Time:         Mon Dec 23 2024 23:12:04 GMT+0530 (India Standard Time)
-[debug] [2024-12-23T17:42:04.557Z] : ----------------------------------------------------------------------
-[debug] [2024-12-23T17:42:04.557Z] : 
-[debug] [2024-12-23T17:42:07.715Z] : > authorizing via signed-in user option
-[debug] [2024-12-23T17:42:07.716Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
-[debug] [2024-12-23T17:42:07.784Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
-
-[debug] [2024-12-23T17:42:08.582Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 17:42:08 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=e3a7a58b-31b6-4c10-b953-9ccbfc331f56;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e3a7a58b-31b6-4c10-b953-9ccbfc331f56;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-23T17:42:08.591Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
-
-[debug] [2024-12-23T17:42:08.750Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 17:42:08 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=fcd59d29-5b06-48a1-b8bc-760721576fd6;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=fcd59d29-5b06-48a1-b8bc-760721576fd6;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[info] [2024-12-23T17:42:08.787Z] : 
-[info] [2024-12-23T17:42:08.798Z] : Executing predeploy script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2024-12-23T17:42:08.798Z] : Executing command > mvn clean package
-[info] [2024-12-23T17:42:08.801Z] : > mvn clean package
-[debug] [2024-12-23T17:43:10.643Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/appsail/upsert 
-
-[debug] [2024-12-23T17:44:11.309Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 17:44:11 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=ca4e1371-2879-4458-9c3e-ad9e90b383fe;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ca4e1371-2879-4458-9c3e-ad9e90b383fe;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[info] [2024-12-23T17:44:11.317Z] : 
-[info] [2024-12-23T17:44:11.319Z] : i AppSail(gcmsongsheets): URL => https://gcmsongsheets-50024114314.development.catalystappsail.in
-[info] [2024-12-23T17:44:11.320Z] : √ AppSail(gcmsongsheets): deploy successful
-[info] [2024-12-23T17:44:11.324Z] : 
-[info] [2024-12-23T17:44:11.325Z] : √ Catalyst deploy complete!
-[debug] [2024-12-23T17:44:11.325Z] : NO ERRORS REGISTERED
-[debug] [2024-12-23T17:44:11.326Z] : EXEC ENDED with event: deploy, message: success
-[debug] [2024-12-23T17:44:11.327Z] : TOTAL DURATION OF COMMAND EXEC : 123752
-[debug] [2024-12-23T18:55:58.352Z] : 
-[debug] [2024-12-23T18:55:58.355Z] : ----------------------------------------------------------------------
-[debug] [2024-12-23T18:55:58.356Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
-[debug] [2024-12-23T18:55:58.356Z] : CLI Version:  1.17.6
-[debug] [2024-12-23T18:55:58.357Z] : Platform:     win32
-[debug] [2024-12-23T18:55:58.357Z] : Node Version: v20.12.2
-[debug] [2024-12-23T18:55:58.357Z] : Time:         Tue Dec 24 2024 00:25:58 GMT+0530 (India Standard Time)
-[debug] [2024-12-23T18:55:58.358Z] : ----------------------------------------------------------------------
-[debug] [2024-12-23T18:55:58.358Z] : 
-[debug] [2024-12-23T18:56:03.689Z] : > authorizing via signed-in user option
-[debug] [2024-12-23T18:56:03.690Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
-[debug] [2024-12-23T18:56:03.789Z] : > refreshing access token <
-[debug] [2024-12-23T18:56:03.791Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.in/oauth/v2/token 
-<request body omitted>
-
-[debug] [2024-12-23T18:56:04.606Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 18:56:04 GMT","content-type":"application/json;charset=UTF-8","content-length":"168","connection":"keep-alive","set-cookie":["zalb_6e73717622=13e67ac15bc4d3ece130966123511df7; Path=/; Secure; HttpOnly","iamcsr=0e32b01a-2247-4593-b8b1-c7223b0c53c1;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=0e32b01a-2247-4593-b8b1-c7223b0c53c1;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","content-security-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.zohocdn.com https://*.zoho.com https://*.zoho.eu https://*.zoho.com.cn https://*.zoho.com.au https://*.zoho.jp https://*.zoho.uk https://*.zoho.sa https://*.zohocloud.ca; report-uri https://logsapi.zoho.in/csplog?service=accounts;","pragma":"no-cache","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-23T18:56:04.626Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
-
-[debug] [2024-12-23T18:56:05.198Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 18:56:05 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=15e90128-7b4d-41bb-8bae-193295f937fc;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=15e90128-7b4d-41bb-8bae-193295f937fc;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-23T18:56:05.201Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
-
-[debug] [2024-12-23T18:56:05.362Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 18:56:05 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=64823d5c-9282-41d0-bc12-6c1962ccb7b5;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=64823d5c-9282-41d0-bc12-6c1962ccb7b5;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-23T18:56:06.215Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
-[debug] [2024-12-23T18:56:06.228Z] : No basic functions to add
-[info] [2024-12-23T18:56:06.236Z] : 
-[info] [2024-12-23T18:56:06.240Z] : Executing AppSail [PRESERVE] [gcmsongsheets] script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2024-12-23T18:56:06.241Z] : Executing command > mvn clean package
-[info] [2024-12-23T18:56:06.245Z] : > mvn clean package
-[info] [2024-12-23T18:56:48.247Z] : 
-[info] [2024-12-23T18:56:48.250Z] :  >>>>>>>>>>>>>> AppSail <<<<<<<<<<<<<< 
-[info] [2024-12-23T18:56:48.251Z] : i gcmsongsheets: http://localhost:3001
-[info] [2024-12-23T18:56:48.252Z] : 
-[info] [2024-12-23T19:14:13.311Z] : Shutting down server
-[info] [2024-12-23T19:14:13.577Z] : 
-[info] [2024-12-23T19:14:13.588Z] : √ Shutdown complete
-[debug] [2024-12-23T19:14:13.612Z] : NO ERRORS REGISTERED
-[debug] [2024-12-23T19:14:13.619Z] : EXEC ENDED with event: serve, message: success
-[debug] [2024-12-23T19:14:13.621Z] : TOTAL DURATION OF COMMAND EXEC : 1090027
-[debug] [2024-12-23T19:14:21.860Z] : 
-[debug] [2024-12-23T19:14:21.887Z] : ----------------------------------------------------------------------
-[debug] [2024-12-23T19:14:21.887Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
-[debug] [2024-12-23T19:14:21.888Z] : CLI Version:  1.17.6
-[debug] [2024-12-23T19:14:21.888Z] : Platform:     win32
-[debug] [2024-12-23T19:14:21.888Z] : Node Version: v20.12.2
-[debug] [2024-12-23T19:14:21.889Z] : Time:         Tue Dec 24 2024 00:44:21 GMT+0530 (India Standard Time)
-[debug] [2024-12-23T19:14:21.889Z] : ----------------------------------------------------------------------
-[debug] [2024-12-23T19:14:21.889Z] : 
-[debug] [2024-12-23T19:14:25.965Z] : > authorizing via signed-in user option
-[debug] [2024-12-23T19:14:25.966Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
-[debug] [2024-12-23T19:14:26.021Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
-
-[debug] [2024-12-23T19:14:26.886Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 19:14:26 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=ef9dfa61-050f-4ee8-a80b-fe425d447d4f;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ef9dfa61-050f-4ee8-a80b-fe425d447d4f;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-23T19:14:26.896Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
-
-[debug] [2024-12-23T19:14:27.089Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 19:14:27 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=ca702787-3fbc-4bf9-a054-169715bb0d0a;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ca702787-3fbc-4bf9-a054-169715bb0d0a;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-23T19:14:27.976Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
-[debug] [2024-12-23T19:14:27.994Z] : No basic functions to add
-[info] [2024-12-23T19:14:28.001Z] : 
-[info] [2024-12-23T19:14:28.003Z] : Executing AppSail [PRESERVE] [gcmsongsheets] script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2024-12-23T19:14:28.003Z] : Executing command > mvn clean package
-[info] [2024-12-23T19:14:28.005Z] : > mvn clean package
-[info] [2024-12-23T19:15:06.622Z] : 
-[info] [2024-12-23T19:15:06.626Z] :  >>>>>>>>>>>>>> AppSail <<<<<<<<<<<<<< 
-[info] [2024-12-23T19:15:06.627Z] : i gcmsongsheets: http://localhost:3001
-[info] [2024-12-23T19:15:06.628Z] : 
-[info] [2024-12-23T19:16:00.808Z] : Shutting down server
-[info] [2024-12-23T19:16:00.820Z] : 
-[info] [2024-12-23T19:16:00.821Z] : √ Shutdown complete
-[debug] [2024-12-23T19:16:00.822Z] : NO ERRORS REGISTERED
-[debug] [2024-12-23T19:16:00.823Z] : EXEC ENDED with event: serve, message: success
-[debug] [2024-12-23T19:16:00.823Z] : TOTAL DURATION OF COMMAND EXEC : 94960
-[debug] [2024-12-23T19:16:09.630Z] : 
-[debug] [2024-12-23T19:16:09.632Z] : ----------------------------------------------------------------------
-[debug] [2024-12-23T19:16:09.632Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js deploy
-[debug] [2024-12-23T19:16:09.633Z] : CLI Version:  1.17.6
-[debug] [2024-12-23T19:16:09.633Z] : Platform:     win32
-[debug] [2024-12-23T19:16:09.634Z] : Node Version: v20.12.2
-[debug] [2024-12-23T19:16:09.634Z] : Time:         Tue Dec 24 2024 00:46:09 GMT+0530 (India Standard Time)
-[debug] [2024-12-23T19:16:09.634Z] : ----------------------------------------------------------------------
-[debug] [2024-12-23T19:16:09.635Z] : 
-[debug] [2024-12-23T19:16:12.302Z] : > authorizing via signed-in user option
-[debug] [2024-12-23T19:16:12.303Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
-[debug] [2024-12-23T19:16:12.351Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
-
-[debug] [2024-12-23T19:16:12.884Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 19:16:12 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=3af56ea6-bbab-4c3c-ac54-39b71bc5dbdc;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=3af56ea6-bbab-4c3c-ac54-39b71bc5dbdc;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2024-12-23T19:16:12.893Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
-
-[debug] [2024-12-23T19:16:13.086Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 19:16:13 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=9cbce0d3-150a-40e0-870d-7e50d81ec4d4;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=9cbce0d3-150a-40e0-870d-7e50d81ec4d4;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[info] [2024-12-23T19:16:13.147Z] : 
-[info] [2024-12-23T19:16:13.153Z] : Executing predeploy script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2024-12-23T19:16:13.153Z] : Executing command > mvn clean package
-[info] [2024-12-23T19:16:13.154Z] : > mvn clean package
-[debug] [2024-12-23T19:16:42.331Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/appsail/upsert 
-
-[debug] [2024-12-23T19:17:25.681Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Mon, 23 Dec 2024 19:17:25 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=3310551b-cb56-4ffd-8edf-4a4cdfc8a70c;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=3310551b-cb56-4ffd-8edf-4a4cdfc8a70c;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[info] [2024-12-23T19:17:25.689Z] : 
-[info] [2024-12-23T19:17:25.690Z] : i AppSail(gcmsongsheets): URL => https://gcmsongsheets-50024114314.development.catalystappsail.in
-[info] [2024-12-23T19:17:25.692Z] : √ AppSail(gcmsongsheets): deploy successful
-[info] [2024-12-23T19:17:25.694Z] : 
-[info] [2024-12-23T19:17:25.695Z] : √ Catalyst deploy complete!
-[debug] [2024-12-23T19:17:25.696Z] : NO ERRORS REGISTERED
-[debug] [2024-12-23T19:17:25.697Z] : EXEC ENDED with event: deploy, message: success
-[debug] [2024-12-23T19:17:25.697Z] : TOTAL DURATION OF COMMAND EXEC : 73462
-[debug] [2025-01-03T11:13:12.734Z] : 
-[debug] [2025-01-03T11:13:12.756Z] : ----------------------------------------------------------------------
-[debug] [2025-01-03T11:13:12.759Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
-[debug] [2025-01-03T11:13:12.759Z] : CLI Version:  1.17.6
-[debug] [2025-01-03T11:13:12.759Z] : Platform:     win32
-[debug] [2025-01-03T11:13:12.759Z] : Node Version: v20.12.2
-[debug] [2025-01-03T11:13:12.760Z] : Time:         Fri Jan 03 2025 16:43:12 GMT+0530 (India Standard Time)
-[debug] [2025-01-03T11:13:12.760Z] : ----------------------------------------------------------------------
-[debug] [2025-01-03T11:13:12.760Z] : 
-[debug] [2025-01-03T11:13:14.936Z] : > authorizing via signed-in user option
-[debug] [2025-01-03T11:13:14.937Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
-[debug] [2025-01-03T11:13:14.958Z] : > refreshing access token <
-[debug] [2025-01-03T11:13:14.959Z] : >>>> HTTP REQUEST : POST https://accounts.zoho.in/oauth/v2/token 
-<request body omitted>
-
-[debug] [2025-01-03T11:13:15.592Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Fri, 03 Jan 2025 11:13:15 GMT","content-type":"application/json;charset=UTF-8","content-length":"168","connection":"keep-alive","set-cookie":["zalb_6e73717622=cc36c6f8a6790832246efd66c032e512; Path=/; Secure; HttpOnly","iamcsr=382966c5-404d-4107-b049-a506b0b6fa1a;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=382966c5-404d-4107-b049-a506b0b6fa1a;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"no-store","x-content-type-options":"nosniff","content-security-policy":"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.zohocdn.com https://*.zoho.com https://*.zoho.eu https://*.zoho.com.cn https://*.zoho.com.au https://*.zoho.jp https://*.zoho.uk https://*.zoho.sa https://*.zohocloud.ca; report-uri https://logsapi.zoho.in/csplog?service=accounts;","pragma":"no-cache","x-frame-options":"SAMEORIGIN","content-language":"en-US","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2025-01-03T11:13:15.603Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
-
-[debug] [2025-01-03T11:13:16.161Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Fri, 03 Jan 2025 11:13:16 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=411f509465b028e7e235eac6930aaab2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=cc9159e9-2f29-4abe-8594-76b960e244bc;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=cc9159e9-2f29-4abe-8594-76b960e244bc;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2025-01-03T11:13:16.163Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
-
-[debug] [2025-01-03T11:13:16.328Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Fri, 03 Jan 2025 11:13:16 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=ed010f63633be60a322039283f31a645; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=1e7cf6b7-2b20-45c8-beb2-1f9cc443fda8;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=1e7cf6b7-2b20-45c8-beb2-1f9cc443fda8;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2025-01-03T11:13:16.806Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
-[debug] [2025-01-03T11:13:16.814Z] : No basic functions to add
-[info] [2025-01-03T11:13:16.816Z] : 
-[info] [2025-01-03T11:13:16.817Z] : Executing AppSail [PRESERVE] [gcmsongsheets] script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2025-01-03T11:13:16.817Z] : Executing command > mvn clean package
-[info] [2025-01-03T11:13:16.817Z] : > mvn clean package
-[info] [2025-01-03T11:13:42.112Z] : 
-[info] [2025-01-03T11:13:42.112Z] :  >>>>>>>>>>>>>> AppSail <<<<<<<<<<<<<< 
-[info] [2025-01-03T11:13:42.113Z] : i gcmsongsheets: http://localhost:3001
-[info] [2025-01-03T11:13:42.113Z] : 
-[info] [2025-01-03T11:14:28.284Z] : Shutting down server
-[info] [2025-01-03T11:14:28.292Z] : 
-[info] [2025-01-03T11:14:28.295Z] : √ Shutdown complete
-[debug] [2025-01-03T11:14:28.296Z] : NO ERRORS REGISTERED
-[debug] [2025-01-03T11:14:28.296Z] : EXEC ENDED with event: serve, message: success
-[debug] [2025-01-03T11:14:28.296Z] : TOTAL DURATION OF COMMAND EXEC : 73408
-[debug] [2025-01-03T11:14:31.706Z] : 
-[debug] [2025-01-03T11:14:31.707Z] : ----------------------------------------------------------------------
-[debug] [2025-01-03T11:14:31.707Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
-[debug] [2025-01-03T11:14:31.708Z] : CLI Version:  1.17.6
-[debug] [2025-01-03T11:14:31.708Z] : Platform:     win32
-[debug] [2025-01-03T11:14:31.708Z] : Node Version: v20.12.2
-[debug] [2025-01-03T11:14:31.708Z] : Time:         Fri Jan 03 2025 16:44:31 GMT+0530 (India Standard Time)
-[debug] [2025-01-03T11:14:31.708Z] : ----------------------------------------------------------------------
-[debug] [2025-01-03T11:14:31.708Z] : 
-[debug] [2025-01-03T11:14:33.486Z] : > authorizing via signed-in user option
-[debug] [2025-01-03T11:14:33.486Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
-[debug] [2025-01-03T11:14:33.500Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
-
-[debug] [2025-01-03T11:14:33.996Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Fri, 03 Jan 2025 11:14:33 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=411f509465b028e7e235eac6930aaab2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=ce5740ed-7204-4dcc-9657-b5d2f8fc3ec6;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ce5740ed-7204-4dcc-9657-b5d2f8fc3ec6;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2025-01-03T11:14:33.999Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
-
-[debug] [2025-01-03T11:14:34.167Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Fri, 03 Jan 2025 11:14:34 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=ed010f63633be60a322039283f31a645; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=c29e4aab-a4b6-463f-8774-d9d3fc81cc92;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c29e4aab-a4b6-463f-8774-d9d3fc81cc92;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2025-01-03T11:14:34.592Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
-[debug] [2025-01-03T11:14:34.599Z] : No basic functions to add
-[info] [2025-01-03T11:14:34.600Z] : 
-[info] [2025-01-03T11:14:34.600Z] : Executing AppSail [PRESERVE] [gcmsongsheets] script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2025-01-03T11:14:34.601Z] : Executing command > mvn clean package
-[info] [2025-01-03T11:14:34.601Z] : > mvn clean package
-[info] [2025-01-03T11:14:44.766Z] : 
-[info] [2025-01-03T11:14:44.766Z] :  >>>>>>>>>>>>>> AppSail <<<<<<<<<<<<<< 
-[info] [2025-01-03T11:14:44.767Z] : i gcmsongsheets: http://localhost:3001
-[info] [2025-01-03T11:14:44.767Z] : 
-[info] [2025-01-03T11:36:19.217Z] : Shutting down server
-[info] [2025-01-03T11:36:19.359Z] : 
-[info] [2025-01-03T11:36:19.364Z] : √ Shutdown complete
-[debug] [2025-01-03T11:36:19.380Z] : NO ERRORS REGISTERED
-[debug] [2025-01-03T11:36:19.388Z] : EXEC ENDED with event: serve, message: success
-[debug] [2025-01-03T11:36:19.389Z] : TOTAL DURATION OF COMMAND EXEC : 1305923
-[debug] [2025-01-03T11:36:21.979Z] : 
-[debug] [2025-01-03T11:36:22.010Z] : ----------------------------------------------------------------------
-[debug] [2025-01-03T11:36:22.011Z] : Command:      C:\Program Files\nodejs\node.exe D:\Users\p.victorjebaraj\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
-[debug] [2025-01-03T11:36:22.011Z] : CLI Version:  1.17.6
-[debug] [2025-01-03T11:36:22.011Z] : Platform:     win32
-[debug] [2025-01-03T11:36:22.011Z] : Node Version: v20.12.2
-[debug] [2025-01-03T11:36:22.012Z] : Time:         Fri Jan 03 2025 17:06:22 GMT+0530 (India Standard Time)
-[debug] [2025-01-03T11:36:22.012Z] : ----------------------------------------------------------------------
-[debug] [2025-01-03T11:36:22.012Z] : 
-[debug] [2025-01-03T11:36:24.110Z] : > authorizing via signed-in user option
-[debug] [2025-01-03T11:36:24.110Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute","ZohoCatalyst.authentication.CREATE"]
-[debug] [2025-01-03T11:36:24.133Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744 
-
-[debug] [2025-01-03T11:36:24.783Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Fri, 03 Jan 2025 11:36:24 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=411f509465b028e7e235eac6930aaab2; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=4bc1291d-a45e-42aa-a0c9-4c03d6ec351c;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=4bc1291d-a45e-42aa-a0c9-4c03d6ec351c;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2025-01-03T11:36:24.788Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/10165000000046744/environment 
-
-[debug] [2025-01-03T11:36:24.958Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Fri, 03 Jan 2025 11:36:24 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=ed010f63633be60a322039283f31a645; Path=/; Secure; HttpOnly","ZD_CSRF_TOKEN=6db652bb-a0d4-4dd6-8ed8-7f25b5a450df;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=6db652bb-a0d4-4dd6-8ed8-7f25b5a450df;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
-
-[debug] [2025-01-03T11:36:25.442Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
-[debug] [2025-01-03T11:36:25.449Z] : No basic functions to add
-[info] [2025-01-03T11:36:25.451Z] : 
-[info] [2025-01-03T11:36:25.451Z] : Executing AppSail [PRESERVE] [gcmsongsheets] script in D:\Users\p.victorjebaraj\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\gcmsongsheets
-[debug] [2025-01-03T11:36:25.451Z] : Executing command > mvn clean package
-[info] [2025-01-03T11:36:25.451Z] : > mvn clean package
-[info] [2025-01-03T11:36:38.723Z] : 
-[info] [2025-01-03T11:36:38.724Z] :  >>>>>>>>>>>>>> AppSail <<<<<<<<<<<<<< 
-[info] [2025-01-03T11:36:38.724Z] : i gcmsongsheets: http://localhost:3001
-[info] [2025-01-03T11:36:38.725Z] : 
+[info] [2025-01-09T08:54:11.346Z] : 
+[info] [2025-01-09T08:54:11.357Z] : i AppSail(gcmsongsheets): URL => https://gcmsongsheets-50024114314.development.catalystappsail.in
+[info] [2025-01-09T08:54:11.360Z] : √ AppSail(gcmsongsheets): deploy successful
+[info] [2025-01-09T08:54:11.361Z] : 
+[info] [2025-01-09T08:54:11.362Z] : √ Catalyst deploy complete!
+[debug] [2025-01-09T08:54:11.362Z] : NO ERRORS REGISTERED
+[debug] [2025-01-09T08:54:11.362Z] : EXEC ENDED with event: deploy, message: success
+[debug] [2025-01-09T08:54:11.363Z] : TOTAL DURATION OF COMMAND EXEC : 83425

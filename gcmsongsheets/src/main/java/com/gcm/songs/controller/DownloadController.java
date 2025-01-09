@@ -1,6 +1,7 @@
 package com.gcm.songs.controller;
 
 import java.io.InputStream;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,16 +11,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.gcm.songs.AuthProviderImpl;
 import com.zc.auth.CatalystSDK;
 import com.zc.component.files.ZCFile;
 import com.zc.component.files.ZCFolder;
 import com.zc.component.object.ZCObject;
 import com.zc.component.object.ZCRowObject;
 import com.zc.component.object.ZCTable;
-import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
@@ -27,16 +28,21 @@ public class DownloadController {
 
 	@GetMapping("/home")
 	public ResponseEntity<String> hello() {
-		return ResponseEntity.ok("Version-1");
+		return ResponseEntity.ok("Version-2");
 	}
 
-	@GetMapping("/save-feedback")
-	public ResponseEntity<String> saveFeedback(@RequestParam("feedbackText") String feedbackText) throws Exception{
+	@PostMapping("/save-feedback")
+	public ResponseEntity<String> saveFeedback(HttpServletRequest request,
+			@RequestBody Map<String, String> feedback) throws Exception { 
+		CatalystSDK.init(new AuthProviderImpl((HttpServletRequest) request));
+		
+		String feedbackText = feedback.get("feedbackText"); 
+		System.out.println(feedbackText);
 		System.out.println("inside save-feedback");
 		ZCObject object = ZCObject.getInstance(); 
 		ZCTable tab = object.getTable("10165000000063001"); 
 		ZCRowObject row = ZCRowObject.getInstance(); 
-		row.set("FeedbackText","George Smith"); 
+		row.set("FeedbackText", feedbackText); 
 		tab.insertRow(row);
 		System.out.println("saved text!");
 		
@@ -47,8 +53,8 @@ public class DownloadController {
 	public ResponseEntity<String> downloadPdf(HttpServletRequest request, HttpServletResponse response,
 			@PathVariable("song-name") String songName) throws Exception {
 
-		CatalystSDK.init(request);
-
+		CatalystSDK.init(new AuthProviderImpl((HttpServletRequest) request));
+		
 		ZCFile fileStore = ZCFile.getInstance();
 		ZCFolder folder = fileStore.getFolderInstance(10165000000046812L);
 		InputStream is = null;
