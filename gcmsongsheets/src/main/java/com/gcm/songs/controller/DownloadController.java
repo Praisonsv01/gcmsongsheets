@@ -295,6 +295,21 @@ public class DownloadController {
             is = folder.downloadFile(10165000000067026L);
             fileId = "10165000000067026";
             break;
+            
+		case "En-vaazhvin-aadhaaram-neerae":
+            is = folder.downloadFile(10165000000068010L);
+            fileId = "10165000000068010";
+            break;
+            
+		case "Naan-edhai-ninaithum-kalanga-maaten":
+            is = folder.downloadFile(10165000000068015L);
+            fileId = "10165000000068015";
+            break;
+            
+		case "Karthar-en-meiparai-irukindreer":
+            is = folder.downloadFile(10165000000068020L);
+            fileId = "10165000000068020";
+            break;
 
 		// Add more cases here with corresponding file IDs for PPT files
 
