@@ -21,7 +21,6 @@ import com.zc.component.object.ZCObject;
 import com.zc.component.object.ZCRowObject;
 import com.zc.component.object.ZCTable;
 
-
 @RestController
 public class DownloadController {
 
@@ -31,29 +30,29 @@ public class DownloadController {
 	}
 
 	@PostMapping("/save-feedback")
-	public ResponseEntity<String> saveFeedback(HttpServletRequest request,
-			@RequestBody Map<String, String> feedback) throws Exception { 
+	public ResponseEntity<String> saveFeedback(HttpServletRequest request, @RequestBody Map<String, String> feedback)
+			throws Exception {
 		CatalystSDK.init(request);
-		
-		String feedbackText = feedback.get("feedbackText"); 
+
+		String feedbackText = feedback.get("feedbackText");
 		System.out.println(feedbackText);
 		System.out.println("inside save-feedback");
-		ZCObject object = ZCObject.getInstance(); 
-		ZCTable tab = object.getTable("10165000000063001"); 
-		ZCRowObject row = ZCRowObject.getInstance(); 
-		row.set("FeedbackText", feedbackText); 
+		ZCObject object = ZCObject.getInstance();
+		ZCTable tab = object.getTable("10165000000063001");
+		ZCRowObject row = ZCRowObject.getInstance();
+		row.set("FeedbackText", feedbackText);
 		tab.insertRow(row);
 		System.out.println("saved text!");
-		
+
 		return ResponseEntity.ok("Feedback saved successfully!");
 	}
-	
+
 	@GetMapping("download-song-pdf/{song-name}")
 	public ResponseEntity<String> downloadPdf(HttpServletRequest request, HttpServletResponse response,
 			@PathVariable("song-name") String songName) throws Exception {
 
 		CatalystSDK.init(request);
-		
+
 		ZCFile fileStore = ZCFile.getInstance();
 		ZCFolder folder = fileStore.getFolderInstance(10165000000046812L);
 		InputStream is = null;
@@ -134,7 +133,7 @@ public class DownloadController {
 			is = folder.downloadFile(10165000000048059L);
 			fileId = "10165000000048059";
 			break;
-			
+
 		case "En-sondhame":
 			is = folder.downloadFile(10165000000048049L);
 			fileId = "10165000000048049";
@@ -194,69 +193,139 @@ public class DownloadController {
 
 		return ResponseEntity.status(HttpStatus.CREATED).body(jsonResponse);
 	}
-	
+
 	@GetMapping("download-song-ppt/{song-name}")
 	public ResponseEntity<String> downloadPpt(HttpServletRequest request, HttpServletResponse response,
-	                                          @PathVariable("song-name") String songName) throws Exception {
+			@PathVariable("song-name") String songName) throws Exception {
 
-	    CatalystSDK.init(request);
+		CatalystSDK.init(request);
 
-	    ZCFile fileStore = ZCFile.getInstance();
-	    ZCFolder folder = fileStore.getFolderInstance(10165000000046812L);
-	    InputStream is = null;
-	    String fileId = "";
+		ZCFile fileStore = ZCFile.getInstance();
+		ZCFolder folder = fileStore.getFolderInstance(10165000000046812L);
+		InputStream is = null;
+		String fileId = "";
 
-	    switch (songName) {
-	        case "Maruroobamaakidum-dhevane":
-	            is = folder.downloadFile(10165000000048119L); // Replace with corresponding PPT file ID if different
-	            fileId = "10165000000048119";
-	            break;
+		switch (songName) {
+		case "Ummai-thuthikka-thuthikka":
+			is = folder.downloadFile(10165000000067135L); // Replace with corresponding PPT file ID if different
+			fileId = "10165000000067135";
+			break;
 
-	        case "Naan-unnai-aasirvadhithu-perugapanuven":
-	            is = folder.downloadFile(10165000000048114L);
-	            fileId = "10165000000048114";
-	            break;
+		case "Ethanaithaan-idargal-vandhaalum":
+			is = folder.downloadFile(10165000000067129L);
+			fileId = "10165000000067129";
+			break;
 
-	        case "Paadhai-theria-aataipola":
-	            is = folder.downloadFile(10165000000048109L);
-	            fileId = "10165000000048109";
-	            break;
+		case "Ummai-paadaamal-naan-enna-seiveno":
+			is = folder.downloadFile(10165000000067124L);
+			fileId = "10165000000067124L";
+			break;
+			
+		case "Ummil-nilai-nirka":
+            is = folder.downloadFile(10165000000067118L);
+            fileId = "10165000000067118";
+            break;
 
-	        case "Needhiyulla-raajave-vaanga":
-	            is = folder.downloadFile(10165000000048104L);
-	            fileId = "10165000000048104";
-	            break;
+		case "Neer-siritha-siripukku-enna-porul":
+			is = folder.downloadFile(10165000000067113L);
+			fileId = "10165000000067113";
+			break;
+			
+		case "Immatum-kaatheerae-nandri":
+			is = folder.downloadFile(10165000000067107L);
+			fileId = "10165000000067107";
+			break;
+			
+		case "En-thevigal-arintha-dheivame":
+            is = folder.downloadFile(10165000000067102L);
+            fileId = "10165000000067102";
+            break;
+            
+		case "Naan-unnai-aasirvadhithu-perugapanuven":
+            is = folder.downloadFile(10165000000067092L);
+            fileId = "10165000000067092";
+            break;
 
-	        // Add more cases here with corresponding file IDs for PPT files
+		case "En-dhevane-ummai-paadiduven":
+            is = folder.downloadFile(10165000000067087L);
+            fileId = "10165000000067087";
+            break;
+            
+		case "Raajathi-raaja":
+            is = folder.downloadFile(10165000000067075L);
+            fileId = "10165000000067075";
+            break;
+            
+		case "Bayapadaathe-sirumandhaye":
+            is = folder.downloadFile(10165000000067070L);
+            fileId = "10165000000067070";
+            break;
+            
+		case "Thadaigalai-neekubavar":
+            is = folder.downloadFile(10165000000067059L);
+            fileId = "10165000000067059";
+            break;
+            
+		case "En-sondhame":
+            is = folder.downloadFile(10165000000067054L);
+            fileId = "10165000000067054";
+            break;
+            
+		case "Needhiyulla-raajave-vaanga":
+            is = folder.downloadFile(10165000000067048L);
+            fileId = "10165000000067048";
+            break;
+            
+		case "Endhan-jebathai-keta-dhevane":
+            is = folder.downloadFile(10165000000067043L);
+            fileId = "10165000000067043";
+            break;
+            
+		case "Setrinindremmai-sirushtithu":
+            is = folder.downloadFile(10165000000067038L);
+            fileId = "10165000000067038";
+            break;
+            
+		case "Ennai-nesikum-yesuvae":
+            is = folder.downloadFile(10165000000067032L);
+            fileId = "10165000000067032";
+            break;
+            
+		case "Parisutharae-varavendume":
+            is = folder.downloadFile(10165000000067026L);
+            fileId = "10165000000067026";
+            break;
 
-	        default:
-	            response.sendError(HttpServletResponse.SC_NOT_FOUND, "File not found");
-	            break;
-	    }
+		// Add more cases here with corresponding file IDs for PPT files
 
-	    if (is == null) {
-	        response.sendError(HttpServletResponse.SC_NOT_FOUND, "File not found");
-	    }
+		default:
+			response.sendError(HttpServletResponse.SC_NOT_FOUND, "File not found");
+			break;
+		}
 
-	    response.setContentType("application/vnd.ms-powerpoint");
-	    response.setHeader("Content-Disposition", "attachment; filename=\"" + songName + ".ppt\"");
+		if (is == null) {
+			response.sendError(HttpServletResponse.SC_NOT_FOUND, "File not found");
+		}
 
-	    try (InputStream inputStream = is) {
-	        byte[] buffer = new byte[1024];
-	        int bytesRead;
-	        while ((bytesRead = inputStream.read(buffer)) != -1) {
-	            response.getOutputStream().write(buffer, 0, bytesRead);
-	        }
-	        response.getOutputStream().flush();
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	        response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error processing file");
-	    }
+		response.setContentType("application/vnd.ms-powerpoint");
+		response.setHeader("Content-Disposition", "attachment; filename=\"" + songName + ".ppt\"");
 
-	    String jsonResponse = String.format("{\"songName\":\"%s\",\"fileId\":%s,\"message\":\"%s\"}", songName, fileId,
-	            "PPT Downloaded successfully!");
+		try (InputStream inputStream = is) {
+			byte[] buffer = new byte[1024];
+			int bytesRead;
+			while ((bytesRead = inputStream.read(buffer)) != -1) {
+				response.getOutputStream().write(buffer, 0, bytesRead);
+			}
+			response.getOutputStream().flush();
+		} catch (Exception e) {
+			e.printStackTrace();
+			response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error processing file");
+		}
 
-	    return ResponseEntity.status(HttpStatus.CREATED).body(jsonResponse);
+		String jsonResponse = String.format("{\"songName\":\"%s\",\"fileId\":%s,\"message\":\"%s\"}", songName, fileId,
+				"PPT Downloaded successfully!");
+
+		return ResponseEntity.status(HttpStatus.CREATED).body(jsonResponse);
 	}
 
 }
