@@ -201,7 +201,7 @@ public class DownloadController {
 		CatalystSDK.init(request);
 
 		ZCFile fileStore = ZCFile.getInstance();
-		ZCFolder folder = fileStore.getFolderInstance(10165000000046812L);
+		ZCFolder folder = fileStore.getFolderInstance(10165000000065012L);
 		InputStream is = null;
 		String fileId = "";
 
