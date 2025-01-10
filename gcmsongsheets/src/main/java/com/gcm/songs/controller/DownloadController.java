@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gcm.songs.AuthProviderImpl;
 import com.zc.auth.CatalystSDK;
 import com.zc.component.files.ZCFile;
 import com.zc.component.files.ZCFolder;
@@ -34,7 +33,7 @@ public class DownloadController {
 	@PostMapping("/save-feedback")
 	public ResponseEntity<String> saveFeedback(HttpServletRequest request,
 			@RequestBody Map<String, String> feedback) throws Exception { 
-		CatalystSDK.init(new AuthProviderImpl((HttpServletRequest) request));
+		CatalystSDK.init(request);
 		
 		String feedbackText = feedback.get("feedbackText"); 
 		System.out.println(feedbackText);
@@ -53,7 +52,7 @@ public class DownloadController {
 	public ResponseEntity<String> downloadPdf(HttpServletRequest request, HttpServletResponse response,
 			@PathVariable("song-name") String songName) throws Exception {
 
-		CatalystSDK.init(new AuthProviderImpl((HttpServletRequest) request));
+		CatalystSDK.init(request);
 		
 		ZCFile fileStore = ZCFile.getInstance();
 		ZCFolder folder = fileStore.getFolderInstance(10165000000046812L);
@@ -61,9 +60,34 @@ public class DownloadController {
 		String fileId = "";
 
 		switch (songName) {
-		case "Maruroobamaakidum-dhevane":
-			is = folder.downloadFile(10165000000048119L);
-			fileId = "10165000000048119";
+		case "Neer-siritha-siripukku-enna-porul":
+			is = folder.downloadFile(10165000000067021L);
+			fileId = "10165000000067021";
+			break;
+
+		case "Raajathi-raaja":
+			is = folder.downloadFile(10165000000067016L);
+			fileId = "10165000000067016";
+			break;
+
+		case "Bayapadaathe-sirumandhaye":
+			is = folder.downloadFile(10165000000067011L);
+			fileId = "10165000000067011";
+			break;
+
+		case "Endhan-jebathai-keta-dhevane":
+			is = folder.downloadFile(10165000000067005L);
+			fileId = "10165000000067005";
+			break;
+
+		case "Ennai-nesikum-yesuvae":
+			is = folder.downloadFile(10165000000057008L);
+			fileId = "10165000000057008";
+			break;
+
+		case "Parisutharae-varavendume":
+			is = folder.downloadFile(10165000000057002L);
+			fileId = "10165000000057002";
 			break;
 
 		case "Naan-unnai-aasirvadhithu-perugapanuven":
@@ -71,22 +95,12 @@ public class DownloadController {
 			fileId = "10165000000048114";
 			break;
 
-		case "Paadhai-theria-aataipola":
-			is = folder.downloadFile(10165000000048109L);
-			fileId = "10165000000048109";
-			break;
-
 		case "Needhiyulla-raajave-vaanga":
 			is = folder.downloadFile(10165000000048104L);
 			fileId = "10165000000048104";
 			break;
 
-		case "Dhesathai-sutri-vandhom-dhevane":
-			is = folder.downloadFile(10165000000048119L);
-			fileId = "10165000000048119";
-			break;
-
-		case "Naan-edhai-ninaithum-kalangamaaten":
+		case "Naan-edhai-ninaithum-kalanga-maaten":
 			is = folder.downloadFile(10165000000048094L);
 			fileId = "10165000000048094";
 			break;
@@ -101,14 +115,9 @@ public class DownloadController {
 			fileId = "10165000000048084";
 			break;
 
-		case "Karthar-en-meiparai-irunkindreer":
+		case "Karthar-en-meiparai-irukindreer":
 			is = folder.downloadFile(10165000000048079L);
 			fileId = "10165000000048079";
-			break;
-
-		case "Ennai-aalum-dheivam":
-			is = folder.downloadFile(10165000000048074L);
-			fileId = "10165000000048074";
 			break;
 
 		case "En-vaazhvin-aadhaaram-neerae":
@@ -125,15 +134,10 @@ public class DownloadController {
 			is = folder.downloadFile(10165000000048059L);
 			fileId = "10165000000048059";
 			break;
-
-		case "En-sondhame-en-piriyame":
+			
+		case "En-sondhame":
 			is = folder.downloadFile(10165000000048049L);
 			fileId = "10165000000048049";
-			break;
-
-		case "Ezhumbu-ezhumbu-seeyone":
-			is = folder.downloadFile(10165000000048039L);
-			fileId = "10165000000048039";
 			break;
 
 		case "Ethanaidhaan-idargal-vandhaalum":
@@ -141,12 +145,12 @@ public class DownloadController {
 			fileId = "10165000000048029";
 			break;
 
-		case "Ummai-paadamal-naan-enna-seiveno":
+		case "Ummai-paadaamal-naan-enna-seiveno":
 			is = folder.downloadFile(10165000000048024L);
 			fileId = "10165000000048024";
 			break;
 
-		case "Ummai-thuthika-thuthika-endhan-ullam-magizhudhe":
+		case "Ummai-thuthikka-thuthikka":
 			is = folder.downloadFile(10165000000048019L);
 			fileId = "10165000000048019";
 			break;
@@ -191,4 +195,68 @@ public class DownloadController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(jsonResponse);
 	}
 	
+	@GetMapping("download-song-ppt/{song-name}")
+	public ResponseEntity<String> downloadPpt(HttpServletRequest request, HttpServletResponse response,
+	                                          @PathVariable("song-name") String songName) throws Exception {
+
+	    CatalystSDK.init(request);
+
+	    ZCFile fileStore = ZCFile.getInstance();
+	    ZCFolder folder = fileStore.getFolderInstance(10165000000046812L);
+	    InputStream is = null;
+	    String fileId = "";
+
+	    switch (songName) {
+	        case "Maruroobamaakidum-dhevane":
+	            is = folder.downloadFile(10165000000048119L); // Replace with corresponding PPT file ID if different
+	            fileId = "10165000000048119";
+	            break;
+
+	        case "Naan-unnai-aasirvadhithu-perugapanuven":
+	            is = folder.downloadFile(10165000000048114L);
+	            fileId = "10165000000048114";
+	            break;
+
+	        case "Paadhai-theria-aataipola":
+	            is = folder.downloadFile(10165000000048109L);
+	            fileId = "10165000000048109";
+	            break;
+
+	        case "Needhiyulla-raajave-vaanga":
+	            is = folder.downloadFile(10165000000048104L);
+	            fileId = "10165000000048104";
+	            break;
+
+	        // Add more cases here with corresponding file IDs for PPT files
+
+	        default:
+	            response.sendError(HttpServletResponse.SC_NOT_FOUND, "File not found");
+	            break;
+	    }
+
+	    if (is == null) {
+	        response.sendError(HttpServletResponse.SC_NOT_FOUND, "File not found");
+	    }
+
+	    response.setContentType("application/vnd.ms-powerpoint");
+	    response.setHeader("Content-Disposition", "attachment; filename=\"" + songName + ".ppt\"");
+
+	    try (InputStream inputStream = is) {
+	        byte[] buffer = new byte[1024];
+	        int bytesRead;
+	        while ((bytesRead = inputStream.read(buffer)) != -1) {
+	            response.getOutputStream().write(buffer, 0, bytesRead);
+	        }
+	        response.getOutputStream().flush();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error processing file");
+	    }
+
+	    String jsonResponse = String.format("{\"songName\":\"%s\",\"fileId\":%s,\"message\":\"%s\"}", songName, fileId,
+	            "PPT Downloaded successfully!");
+
+	    return ResponseEntity.status(HttpStatus.CREATED).body(jsonResponse);
+	}
+
 }
