@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.gcm.songs.service.Service;
 import com.zc.auth.CatalystSDK;
 import com.zc.component.files.ZCFile;
 import com.zc.component.files.ZCFolder;
@@ -24,25 +26,44 @@ import com.zc.component.object.ZCTable;
 @RestController
 public class DownloadController {
 
+	@Autowired
+	Service service;
+
 	@GetMapping("/home")
 	public ResponseEntity<String> hello() {
-		return ResponseEntity.ok("Version-2");
+		return ResponseEntity.ok("GCMSONGSHEETS_BACKEND_APP_V3");
 	}
 
 	@PostMapping("/save-feedback")
 	public ResponseEntity<String> saveFeedback(HttpServletRequest request, @RequestBody Map<String, String> feedback)
 			throws Exception {
+		// Initialize the Catalyst SDK
 		CatalystSDK.init(request);
 
+		// Extract inputs from the request body
 		String feedbackText = feedback.get("feedbackText");
-		System.out.println(feedbackText);
-		System.out.println("inside save-feedback");
+		String name = feedback.get("name");
+		String emailId = feedback.get("emailId");
+
+		System.out.println("Feedback Text: " + feedbackText);
+		System.out.println("Name: " + name);
+		System.out.println("Email ID: " + emailId);
+		System.out.println("Inside save-feedback");
+
+		// Save the feedback into the Catalyst table
 		ZCObject object = ZCObject.getInstance();
-		ZCTable tab = object.getTable("10165000000063001");
+		ZCTable tab = object.getTable("12520000000013001");
 		ZCRowObject row = ZCRowObject.getInstance();
 		row.set("FeedbackText", feedbackText);
+		row.set("Name", name);
+		row.set("EmailId", emailId);
 		tab.insertRow(row);
-		System.out.println("saved text!");
+
+		System.out.println("Saved feedback data!");
+
+		// Send an email
+		service.sendMail("Feedback received from: " + name + " (" + emailId + ")\n\n" + feedbackText);
+		System.out.println("After sending mail - from Controller");
 
 		return ResponseEntity.ok("Feedback saved successfully!");
 	}
@@ -220,96 +241,96 @@ public class DownloadController {
 			is = folder.downloadFile(10165000000067124L);
 			fileId = "10165000000067124L";
 			break;
-			
+
 		case "Ummil-nilai-nirka":
-            is = folder.downloadFile(10165000000067118L);
-            fileId = "10165000000067118";
-            break;
+			is = folder.downloadFile(10165000000067118L);
+			fileId = "10165000000067118";
+			break;
 
 		case "Neer-siritha-siripukku-enna-porul":
 			is = folder.downloadFile(10165000000067113L);
 			fileId = "10165000000067113";
 			break;
-			
+
 		case "Immatum-kaatheerae-nandri":
 			is = folder.downloadFile(10165000000067107L);
 			fileId = "10165000000067107";
 			break;
-			
+
 		case "En-thevigal-arintha-dheivame":
-            is = folder.downloadFile(10165000000067102L);
-            fileId = "10165000000067102";
-            break;
-            
+			is = folder.downloadFile(10165000000067102L);
+			fileId = "10165000000067102";
+			break;
+
 		case "Naan-unnai-aasirvadhithu-perugapanuven":
-            is = folder.downloadFile(10165000000067092L);
-            fileId = "10165000000067092";
-            break;
+			is = folder.downloadFile(10165000000067092L);
+			fileId = "10165000000067092";
+			break;
 
 		case "En-dhevane-ummai-paadiduven":
-            is = folder.downloadFile(10165000000067087L);
-            fileId = "10165000000067087";
-            break;
-            
+			is = folder.downloadFile(10165000000067087L);
+			fileId = "10165000000067087";
+			break;
+
 		case "Raajathi-raaja":
-            is = folder.downloadFile(10165000000067075L);
-            fileId = "10165000000067075";
-            break;
-            
+			is = folder.downloadFile(10165000000067075L);
+			fileId = "10165000000067075";
+			break;
+
 		case "Bayapadaathe-sirumandhaye":
-            is = folder.downloadFile(10165000000067070L);
-            fileId = "10165000000067070";
-            break;
-            
+			is = folder.downloadFile(10165000000067070L);
+			fileId = "10165000000067070";
+			break;
+
 		case "Thadaigalai-neekubavar":
-            is = folder.downloadFile(10165000000067059L);
-            fileId = "10165000000067059";
-            break;
-            
+			is = folder.downloadFile(10165000000067059L);
+			fileId = "10165000000067059";
+			break;
+
 		case "En-sondhame":
-            is = folder.downloadFile(10165000000067054L);
-            fileId = "10165000000067054";
-            break;
-            
+			is = folder.downloadFile(10165000000067054L);
+			fileId = "10165000000067054";
+			break;
+
 		case "Needhiyulla-raajave-vaanga":
-            is = folder.downloadFile(10165000000067048L);
-            fileId = "10165000000067048";
-            break;
-            
+			is = folder.downloadFile(10165000000067048L);
+			fileId = "10165000000067048";
+			break;
+
 		case "Endhan-jebathai-keta-dhevane":
-            is = folder.downloadFile(10165000000067043L);
-            fileId = "10165000000067043";
-            break;
-            
+			is = folder.downloadFile(10165000000067043L);
+			fileId = "10165000000067043";
+			break;
+
 		case "Setrinindremmai-sirushtithu":
-            is = folder.downloadFile(10165000000067038L);
-            fileId = "10165000000067038";
-            break;
-            
+			is = folder.downloadFile(10165000000067038L);
+			fileId = "10165000000067038";
+			break;
+
 		case "Ennai-nesikum-yesuvae":
-            is = folder.downloadFile(10165000000067032L);
-            fileId = "10165000000067032";
-            break;
-            
+			is = folder.downloadFile(10165000000067032L);
+			fileId = "10165000000067032";
+			break;
+
 		case "Parisutharae-varavendume":
-            is = folder.downloadFile(10165000000067026L);
-            fileId = "10165000000067026";
-            break;
-            
+			is = folder.downloadFile(10165000000067026L);
+			fileId = "10165000000067026";
+			break;
+
 		case "En-vaazhvin-aadhaaram-neerae":
-            is = folder.downloadFile(10165000000068010L);
-            fileId = "10165000000068010";
-            break;
-            
+			is = folder.downloadFile(10165000000068010L);
+			fileId = "10165000000068010";
+			break;
+
 		case "Naan-edhai-ninaithum-kalanga-maaten":
-            is = folder.downloadFile(10165000000068015L);
-            fileId = "10165000000068015";
-            break;
-            
+			is = folder.downloadFile(10165000000068015L);
+			fileId = "10165000000068015";
+			break;
+
 		case "Karthar-en-meiparai-irukindreer":
-            is = folder.downloadFile(10165000000068020L);
-            fileId = "10165000000068020";
-            break;
+			is = folder.downloadFile(10165000000068020L);
+			fileId = "10165000000068020";
+			break;
 
 		// Add more cases here with corresponding file IDs for PPT files
 
