@@ -10,17 +10,17 @@
   "projects": [
     {
       "idx": 1,
-      "id": "10165000000046744",
+      "id": "12520000000007080",
       "name": "Glorious-Crown-Ministries",
       "domain": {
-        "id": "50024114314",
-        "name": "glorious-crown-ministries-60032931260.development"
+        "id": "50024528378",
+        "name": "glorious-crown-ministries-60036505026.development"
       },
-      "timezone": "Europe/Dublin",
+      "timezone": "Asia/Kolkata",
       "env": [
         {
           "idx": 1,
-          "id": "60032931260",
+          "id": "60036505026",
           "name": "Development",
           "type": 3
         }
