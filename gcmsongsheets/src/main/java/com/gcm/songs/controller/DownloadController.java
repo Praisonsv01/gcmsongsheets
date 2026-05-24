@@ -62,7 +62,7 @@ public class DownloadController {
 		System.out.println("Saved feedback data!");
 
 		// Send an email
-		service.sendMail("Feedback received from: " + name + " (" + emailId + ")\n\n" + feedbackText);
+		service.sendMail(name, emailId, feedbackText);
 		System.out.println("After sending mail - from Controller");
 
 		return ResponseEntity.ok("Feedback saved successfully!");
