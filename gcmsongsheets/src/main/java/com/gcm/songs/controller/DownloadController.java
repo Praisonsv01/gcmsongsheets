@@ -43,7 +43,7 @@ public class DownloadController {
 		// Extract inputs from the request body
 		String feedbackText = feedback.get("feedbackText");
 		String name = feedback.get("name");
-		String emailId = feedback.get("emailId");
+		String emailId = feedback.get("email");
 
 		System.out.println("Feedback Text: " + feedbackText);
 		System.out.println("Name: " + name);
